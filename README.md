@@ -1,6 +1,7 @@
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
 
+<<<<<<< HEAD
 try purpose
 
 ![header](https://capsule-render.vercel.app/api?height=190&type=waving&color=191724&section=header&&text=Hi%20👋,%20I'm%20Diorcula&fontColor=e0def4&fontSize=40)
@@ -118,3 +119,10 @@ Python                   1 repo              ██░░░░░░░░░�
 [![@diorcula's Holopin board](https://holopin.io/api/user/board?user=diorcula)](https://holopin.io/@diorcula)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=191724&section=footer)
+=======
+try
+
+<!--START_SECTION:waka-->
+
+<!--END_SECTION:waka-->
+>>>>>>> fd70594ac7a2b995fe2662bf3b69aed32a1e11cf
