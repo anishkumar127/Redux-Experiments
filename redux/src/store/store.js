@@ -1,39 +1,27 @@
-import { legacy_createStore as createStore } from "redux";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-const initial = {
-  counter: 0,
-  data: 0,
-};
+const counterSlice = createSlice({
+  name: "counter",
+  initialState: { counter: 0 },
+  reducers: {
+    add(state, action) {
+      state = state.counter++; // working
+      // state.counter++; // working both way.
+    },
+    remove(state, action) {
+      state.counter--;
+    },
+    addBy(state, action) {
+      state.counter += action.payload;
+    },
+    addPrev(state,action){
+      state.counter +=state.counter
+    }
+  },
+});
+export const actions = counterSlice.actions;
+const store = configureStore({
+  reducer: counterSlice.reducer,
+});
 
-const reducerFun = (state = initial, action) => {
-  // synchronous function
-  // we should not mutate the original state.
-  if (action.type === "INC") {
-    return { counter: state.counter + 1 };
-  }
-  if (action.type === "DEC") {
-    return { counter: state.counter - 1 };
-  }
-
-  if (action.type === "addValue") {
-    return {
-      counter: state.counter + action.payload,
-    };
-  }
-
-  if (action.type === "addPrev") {
-    return {
-      counter: state.counter + state.counter,
-    };
-  }
-  // if (action.type === "preData") {
-  //   console.log("state", state.data);
-  //   return {
-  //     ...state.data,
-  //     state:state.data,
-  //   };
-  // }
-
-  return state;
-};
-export const store = createStore(reducerFun);
+export default store;

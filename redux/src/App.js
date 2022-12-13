@@ -1,27 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { actions } from "./store/store";
 function App() {
   const counter = useSelector((state) => state.counter);
-  // const data = useSelector((state) => state.data);
-  // console.log(data);
   const dispatch = useDispatch();
   console.log(counter);
   const add = () => {
-    dispatch({ type: "INC" });
+    dispatch(actions.add());
   };
   const remove = () => {
-    dispatch({ type: "DEC" });
+    dispatch(actions.remove());
   };
   const addValue = () => {
-    dispatch({ type: "addValue", payload: 10 });
+    dispatch(actions.addBy(10));
   };
   const addPrev = () => {
-    dispatch({ type: "addPrev" });
+    dispatch(actions.addPrev());
   };
-  // useEffect(() => {
-  //   console.log("effect running");
-  //   dispatch({ type: "preData" });
-  // }, [counter]);
+
   return (
     <div>
       <h1>Counter </h1>
@@ -30,8 +26,6 @@ function App() {
       <button onClick={remove}>-</button>
       <button onClick={addValue}>Add Value By 10</button>
       <button onClick={addPrev}>Add Value By Previous Number</button>
-
-      {/* <p>show me previous value {}</p> */}
     </div>
   );
 }
