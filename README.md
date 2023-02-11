@@ -1,11 +1,11 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 03 December 2022 - To: 09 February 2023
+From: 03 December 2022 - To: 10 February 2023
 
-Total Time: 207 hrs 43 mins
+Total Time: 213 hrs 5 mins
 
-Other        185 hrs 2 mins  >>>>>>>>>>>>>>>>>>>>>>---   89.08 %
+Other        189 hrs 53 mins >>>>>>>>>>>>>>>>>>>>>>---   89.11 %
 ```
 
 <!--END_SECTION:waka-->
